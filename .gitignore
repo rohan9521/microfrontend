@@ -10,6 +10,10 @@ lerna-debug.log*
 /products/node_modules
 /container/node_modules
 /cart/node_modules
+/container_ecom/node_modules
+/marketing/node_modules
+/dashboard/node_modules
+
 dist
 dist-ssr
 *.local
