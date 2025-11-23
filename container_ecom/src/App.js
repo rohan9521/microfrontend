@@ -3,7 +3,7 @@ import MarketngApp from './components/MarketingApp';
 export const App = () => {
   return (
     <>
-      <div>Container new</div>
+      <div>Container</div>
       <MarketngApp />
     </>
   );
