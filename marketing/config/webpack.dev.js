@@ -8,9 +8,7 @@ const devConfig = {
   mode: "development",
 
   plugins: [
-    new htmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
+    
     new ModuleFederationPlugin({
       name: "marketing",
       filename: "remoteEntry.js",
