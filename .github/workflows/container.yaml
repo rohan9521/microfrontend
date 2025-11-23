@@ -29,6 +29,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-north-1
       - name: Sync built files to S3
-        run: aws s3 sync ./dist s3://${{secrets.AWS_S3_BUCKET_NAME}}/container/latest
+        run: aws s3 sync dist s3://${{secrets.AWS_S3_BUCKET_NAME}}/container/latest
         env:
           AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
