@@ -7,6 +7,10 @@ const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
+  output: {
+    fileName: "[name].[contenthash].js",
+    publicPath: "/container/latest",
+  },
   plugins: [
     new ModuleFederationPlugin({
       name: "container_ecom",
