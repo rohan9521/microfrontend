@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - "/container_ecom/**"
+      - "container_ecom/**"
 defaults:
   run:
     working-directory: 'container_ecom'
