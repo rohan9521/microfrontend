@@ -3,7 +3,7 @@ import MarketngApp from './components/MarketingApp';
 export const App = () => {
   return (
     <>
-      <div>Container with region updated</div>
+      <div>Container with region</div>
       <MarketngApp />
     </>
   );
