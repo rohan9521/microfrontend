@@ -4,11 +4,10 @@ on:
     branches:
       - main
     paths:
-      - "container_ecom/**"
-      - "marketing/**"
+      - "container/**"
 defaults:
   run:
-    working-directory: 'container_ecom'
+    working-directory: 'container'
 jobs:
   build:
     runs-on: ubuntu-latest
