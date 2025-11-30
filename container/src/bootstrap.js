@@ -1,7 +1,7 @@
-import {mount as  mountProducts} from 'products/ProductsIndex';
-import  {mount as mountCart} from 'cart/CartShow';
 
-mountProducts(document.querySelector('#dev-products'));
-mountCart(document.querySelector('#dev-cart'));
+import React from 'react';  
+import ReactDOM from 'react-dom';
+import { App } from './App';
 
-console.log('Container!');
+ReactDOM.render(<App/>, document.querySelector('#root_container'));
+
