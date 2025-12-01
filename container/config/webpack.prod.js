@@ -6,8 +6,9 @@ const webpack = require("webpack");
 
 const prodConfig = {
   mode: "production",
-  output: {
+ output: {
     filename: "[name].[contenthash].js",
+    publicPath: "/container/latest/",
   },
   plugins: [
     new webpack.DefinePlugin({
