@@ -1,11 +1,14 @@
-import React from 'react';
-import MarketngApp from './components/MarketingApp';
+import React from "react";
+import MarketngApp from "./components/MarketingApp";
+import Header from "./components/Header";
+import { BrowserRouter } from "react-router-dom";
 export const App = () => {
-  console.log("Production Domain:", process.env.PRODUCTION_DOMAIN);
   return (
+    <BrowserRouter>
     <>
-      <div>Container</div>
+      <Header />
       <MarketngApp />
     </>
+    </BrowserRouter>
   );
 };
