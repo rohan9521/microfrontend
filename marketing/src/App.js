@@ -1,4 +1,4 @@
-import { StylesProvider } from "@material-ui/core";
+import { StylesProvider ,createGenerateClassName} from "@material-ui/core";
 import { Switch } from "react-router-dom/cjs/react-router-dom";
 import {
   BrowserRouter,
@@ -7,7 +7,6 @@ import {
 import Pricing from "./components/Pricing";
 import Landing from "./components/Landing";
 import React from "react";
-import { StylesProvider,createGenerateClassName } from "@material-ui/styles";
 
   
 export default () => {
