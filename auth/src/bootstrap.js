@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Album from "./components/Landing";
-import App from "./App";
 import { createMemoryHistory, createBrowserHistory } from "history";
-const mount = (element, { onNavigation, browserHistory, initialPath }) => {
-  const history =
-    browserHistory || createMemoryHistory({ initialEntries: [initialPath] });
+import { App } from "./App";
+
+
+const mount = (element, { onNavigation, browserHistory ,initialPath}) => {
+  const history = browserHistory || createMemoryHistory({ initialEntries: [initialPath] });
   if (onNavigation) {
     history.listen(onNavigation);
   }
@@ -21,7 +21,7 @@ const mount = (element, { onNavigation, browserHistory, initialPath }) => {
 };
 
 if (process.env.NODE_ENV === "development") {
-  const devRoot = document.querySelector("#marketing-root");
+  const devRoot = document.querySelector("#auth-root");
   if (devRoot) {
     mount(devRoot, { browserHistory: createBrowserHistory() });
   }

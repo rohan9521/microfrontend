@@ -1,25 +1,29 @@
 const { merge } = require("webpack-merge");
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const commonConfig = require("./webpack.common");
-
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const packageJson = require('../package.json');
 
 const devConfig = {
   mode: "development",
-
+  output: {
+    filename: "[name].js",
+    publicPath: "http://localhost:8083/",
+  },
   plugins: [
+    
     new ModuleFederationPlugin({
-      name: "container_ecom",
-      remotes: {
-        "marketing": "marketing@http://localhost:8081/remoteEntry.js",
-        "auth": "auth@http://localhost:8083/remoteEntry.js",
+      name: "auth",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./AuthIndex": "./src/bootstrap.js",
       },
       shared: packageJson.dependencies,
-    })
+    }),
   ],
 
   devServer: {
-    port: 8000,
+    port: 8083,
     historyApiFallback: {
         index: "/index.html",
     }
