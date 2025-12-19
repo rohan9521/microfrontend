@@ -11,7 +11,7 @@ import React from "react";
   
 export default ({ history, isAuthenticated }) => {
   const generateClassName = createGenerateClassName({ productionPrefix: 'mktapp' });
-
+console.log("Marketing App Authenticated:", isAuthenticated);
   return (
     <StylesProvider generateClassName={generateClassName} >
       <Router history={history}>

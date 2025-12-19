@@ -8,7 +8,8 @@ import { AuthContext } from "../context/ContextProvider";
 const MarketngApp = () => {
   const ref = useRef(null);
   const history = useHistory();
-  const {isAuthenticated} = useContext(AuthContext);
+  const {isAuthenticated, setIsAuthenticated} = useContext(AuthContext);
+  console.log("Marketing Authenticated:", isAuthenticated);
   useEffect(() => {
     const { onParentNavigation } = mount(ref.current, {
       initialPath: history.location.pathname,
@@ -20,7 +21,7 @@ const MarketngApp = () => {
       isAuthenticated: isAuthenticated
     });
     history.listen(onParentNavigation);
-  }, []);
+  }, [isAuthenticated]);
   return <div ref={ref}></div>;
 };
 

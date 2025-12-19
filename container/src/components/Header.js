@@ -61,7 +61,7 @@ export default function Header() {
   const classes = useStyles();
 
   const onClick = () => {
-    if (isAuthenticated && setIsAuthenticated) {
+    if (isAuthenticated === true&& setIsAuthenticated) {
       setIsAuthenticated(false);
     }
   };
