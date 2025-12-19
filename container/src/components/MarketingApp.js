@@ -9,7 +9,6 @@ const MarketngApp = () => {
   const ref = useRef(null);
   const history = useHistory();
   const {isAuthenticated, setIsAuthenticated} = useContext(AuthContext);
-  console.log("Marketing Authenticated:", isAuthenticated);
   useEffect(() => {
     const { onParentNavigation } = mount(ref.current, {
       initialPath: history.location.pathname,

@@ -141,7 +141,6 @@ const footers = [
 
 export default function Pricing({ isAuthenticated }) {
   const classes = useStyles();
-console.log("Pricing Authenticated:", isAuthenticated);
   return (
     <>
       {isAuthenticated === true? (
