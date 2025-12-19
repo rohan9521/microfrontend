@@ -144,7 +144,7 @@ export default function Pricing({ isAuthenticated }) {
 
   return (
     <>
-      {isAuthenticated ? (
+      {isAuthenticated === true? (
         <React.Fragment>
           {/* Hero unit */}
           <Container
