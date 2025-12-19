@@ -9,15 +9,19 @@ import Landing from "./components/Landing";
 import React from "react";
 
   
-export default ({ history }) => {
+export default ({ history, isAuthenticated }) => {
   const generateClassName = createGenerateClassName({ productionPrefix: 'mktapp' });
 
   return (
     <StylesProvider generateClassName={generateClassName} >
       <Router history={history}>
         <Switch>
-          <Route path="/pricing" exact component={Pricing} />
-          <Route path="/" exact component={Landing} />
+          <Route path="/pricing" exact >
+            <Pricing isAuthenticated={isAuthenticated} />
+          </Route>
+          <Route path="/" exact  >
+            <Landing isAuthenticated={isAuthenticated} />
+          </Route>
         </Switch>
       </Router>
     </StylesProvider>

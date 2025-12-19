@@ -2,10 +2,13 @@ import { useEffect, useRef } from "react";
 import { mount } from "marketing/MarkeingIndex";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../context/ContextProvider";
 
 const MarketngApp = () => {
   const ref = useRef(null);
   const history = useHistory();
+  const {isAuthenticated} = useContext(AuthContext);
   useEffect(() => {
     const { onParentNavigation } = mount(ref.current, {
       initialPath: history.location.pathname,
@@ -14,6 +17,7 @@ const MarketngApp = () => {
           history.push(nextPathName);
         }
       },
+      isAuthenticated: isAuthenticated
     });
     history.listen(onParentNavigation);
   }, []);
