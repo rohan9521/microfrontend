@@ -11,7 +11,7 @@ const prodConfig = {
   },
   plugins:[
     new ModuleFederationPlugin({
-      name: "AuthApp",
+      name: "auth",
       filename: "remoteEntry.js",
       exposes: {
         "./AuthIndex": "./src/bootstrap.js",
