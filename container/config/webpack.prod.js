@@ -21,6 +21,7 @@ const prodConfig = {
       remotes: {
         marketing: `marketing@https://d16serwv30k928.cloudfront.net/marketing/latest/remoteEntry.js`,
         auth: `auth@https://d16serwv30k928.cloudfront.net/auth/latest/remoteEntry.js`,
+        dashboard: `dashboard@https://d16serwv30k928.cloudfront.net/dashboard/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
